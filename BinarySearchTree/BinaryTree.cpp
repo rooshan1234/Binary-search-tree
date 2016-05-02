@@ -58,3 +58,38 @@ void BinaryTree<T>::PrintHelper(Node* root) {
 		}
 	}
 }
+
+template<class T>
+void BinaryTree<T>::SearchNode(T value) {
+	if (root->value == value) {
+		std::cout << "Node exists";
+		return;
+	}
+	else if (value > root->value){
+		SearchNodeHelper(root->right, value);
+	}else if (value < root->value){
+		SearchNodeHelper(root->left, value);
+	}
+}
+
+template<class T>
+void BinaryTree<T>::SearchNodeHelper(Node* root, T value) {
+	if (root!= NULL) {
+		if (root->value == value) {
+			std::cout << "Node exist";
+			return;
+		}
+		else if (value > root->value) {
+			SearchNodeHelper(root->right, value);
+		}
+		else if (value < root->value) {
+			SearchNodeHelper(root->left, value);
+		}
+	}
+	//root is null case
+	else {
+		std::cout << "Node does exist";
+		return;
+	}
+	
+}

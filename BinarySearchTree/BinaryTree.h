@@ -11,12 +11,14 @@ private:
 		Node* right;
 	};
 	Node *root;
+	void SearchNodeHelper(Node* root, T value);
+	void InsertNodeHelper(Node*& root, T value);
+	void PrintHelper(Node* root);
 public:
 	BinaryTree() { root = NULL; }
 	void InsertNode(T value);
-	void InsertNodeHelper(Node*& root, T value);
 	void Print();
-	void PrintHelper(Node* root);
+	void SearchNode(T value);
 	~BinaryTree() { delete root; }
 };
 
