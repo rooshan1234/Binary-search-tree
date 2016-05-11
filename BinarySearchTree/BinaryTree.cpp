@@ -183,21 +183,3 @@ typename BinaryTree<T>::Node* BinaryTree<T>::FindDeleteNode(Node *& root)
 		}
 	}
 }
-template<class T>
-void BinaryTree<T>::PrintTreePostOrderHelper(Node * root, int indent)
-{
-	if (root != NULL) {
-		if (root->left) PrintTreePostOrderHelper(root->left, indent + 4);
-		if (root->right) PrintTreePostOrderHelper(root->right, indent + 4);
-		if (indent) {
-			std::cout << std::setw(indent) << ' ';
-		}
-		std::cout << root->value << "\n ";
-	}
-}
-
-template<class T>
-void BinaryTree<T>::PrintTreePostOrder()
-{
-	PrintTreePostOrderHelper(root, 0);
-}
