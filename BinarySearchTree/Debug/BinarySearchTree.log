@@ -2,4 +2,5 @@
   BinaryTree.h
   BinaryTree.cpp
   Generating Code...
+Debug\BinaryTree.obj : warning LNK4042: object specified more than once; extras ignored
   BinarySearchTree.vcxproj -> C:\Users\Rooshan.Rooshan-PC\Documents\GitHub\Binary-search-tree\Debug\BinarySearchTree.exe

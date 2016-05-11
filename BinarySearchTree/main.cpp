@@ -3,25 +3,32 @@
 
 int main() {
 	BinaryTree<int> BTree;
-	BTree.InsertNode(15);
-	BTree.InsertNode(7);
-	BTree.InsertNode(3);
+	BTree.InsertNode(30);
+	BTree.InsertNode(10);
+	BTree.InsertNode(20);
+	BTree.InsertNode(2);
 	BTree.InsertNode(1);
-	BTree.InsertNode(6);
+	BTree.InsertNode(3);
+	BTree.InsertNode(8);
+	BTree.InsertNode(7);
+	//BTree.InsertNode(12);
 
-	//BTree.SearchNode(3);
+	BTree.PrintTreePostOrder();
+
+	//BTree.SearchNode(9);
 	
-	//BTree.DeleteNode(3);
+	BTree.DeleteNode(10);
 
-	BTree.DeleteNode(15);
-
+	//BTree.DeleteNode(15);
 	std::cout << "Node deleted: " << std::endl;
-	BTree.Print();
 
-	BTree.DeleteNode(1);
+	BTree.PrintTreePostOrder();
 
+	//BTree.Print();
+
+	//BTree.DeleteNode(1);
 	//BTree.SearchNode(3);
-	std::cout << "Node deleted: " << std::endl;
-	BTree.Print();
+	//std::cout << "Node deleted: " << std::endl;
+	//BTree.Print();
 
 }
